@@ -1,5 +1,6 @@
 import basicOperations 
 import globalFunctions as gf
+import matrixOperations as mo
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
@@ -30,4 +31,36 @@ def sub(a, b):
 # Working addition
 #print(add([[1,2], [7,8]], [[3,4], [5,6]]))
 # Intential Error:
-print(sub([[1,2] , [1,1]], [[3,4] , [5,6]]))
+#print(sub([[1,2] , [1,1]], [[3,4] , [5,6]]))
+
+def determinent(a):
+    if all(isinstance(x, list) for x in a):
+        return mo.determinent(a)
+    else:
+        gf.errorTraceback()
+        gf.printError('List of lists not found for the matrix')
+
+# Working 
+#print(determinent([[1,2] , [3,4]]))
+# Failure
+#print(determinent([[1,2]]))
+
+def transpose(a):
+    if all(isinstance(x, list) for x in a):
+        return mo.transposeMatrix(a)
+    else:
+        gf.errorTraceback()
+        gf.printError('List of lists not found for the matrix')
+
+# Working 
+# print(transpose([[1,2,6,7] , [3,4,5,5], [5,6,3,2]]))
+
+def inverse(a):
+    if all(isinstance(x, list) for x in a):
+        return mo.inverseMatrix(a)
+    else:
+        gf.errorTraceback()
+        gf.printError('List of lists not found for the matrix') 
+
+# Working 
+print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
