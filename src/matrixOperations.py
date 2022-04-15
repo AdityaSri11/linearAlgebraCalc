@@ -74,3 +74,7 @@ def inverseMatrix(a):
         gf.errorTraceback()
         gf.printError('Matrix is not a square matrix!')
     
+def systemOfEquations(a):
+
+    #sol = [0 for x in range(len(a) - 1)]
+    

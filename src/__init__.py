@@ -63,4 +63,5 @@ def inverse(a):
         gf.printError('List of lists not found for the matrix') 
 
 # Working 
-print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
+#print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
+
