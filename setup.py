@@ -1,10 +1,13 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 import codecs
 import os
 
-VERSION = '0.0.7'
+VERSION = '0.0.10'
 DESCRIPTION = 'Linear Algebra Calculator with simple functions'
 #LONG_DESCRIPTION = 'A linear algebra function that uses python to calculate values such as the inverse or transpose of a matrix and much more'
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 # Setting up
 setup(
@@ -13,8 +16,8 @@ setup(
     author="Aditya Srikanth",
     author_email="aditya.srikanth11@gmail.com" ,
     description=DESCRIPTION,
-    #long_description_content_type="text/markdown",
-    #long_description=long_description,
+    long_description_content_type="text/markdown",
+    long_description=long_description, 
     packages=find_packages(),
     install_requires=[],
     keywords=['python', 'mathamatics', 'Linear Algebra', 'Vectors', 'Eigen Values'],
@@ -27,3 +30,8 @@ setup(
         "Operating System :: Microsoft :: Windows",
     ]
 )
+
+'''
+python3 setup.py bdist_wheel  
+twine upload --skip-existing dist/*
+'''

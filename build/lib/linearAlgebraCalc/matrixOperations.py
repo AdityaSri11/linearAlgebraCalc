@@ -1,12 +1,11 @@
-from sympy import det
-import globalFunctions as gf
+from linearAlgebraCalc.globalFunctions import arrDim, errorTraceback, printError
 
 def __cofactor(a, i , j):
     return [row[: j] + row[j+1:] for row in (a[: i] + a[i+1:])]
 
 def determinent(a):
 
-    dim = gf.arrDim(a)
+    dim = arrDim(a)
 
     if (dim[0] == dim[1]):
         if dim[0] == 2:
@@ -23,8 +22,8 @@ def determinent(a):
             
             return deter
     else:
-        gf.errorTraceback()
-        gf.printError('Matrix is not a square matrix!')
+        errorTraceback()
+        printError('Matrix is not a square matrix!')
 
 def transposeMatrix(a):
 
@@ -37,7 +36,7 @@ def transposeMatrix(a):
     return transposed
 
 def inverseMatrix(a):
-    dim = gf.arrDim(a)
+    dim = arrDim(a)
 
     if (dim[0] == dim[1]):
 
@@ -68,13 +67,9 @@ def inverseMatrix(a):
 
             return inverse
         else:
-            gf.errorTraceback()
-            gf.printError('Singular matrix, no inverse!')
+            errorTraceback()
+            printError('Singular matrix, no inverse!')
     else:
-        gf.errorTraceback()
-        gf.printError('Matrix is not a square matrix!')
-    
-def systemOfEquations(a):
-
-    #sol = [0 for x in range(len(a) - 1)]
+        errorTraceback()
+        printError('Matrix is not a square matrix!')
     
