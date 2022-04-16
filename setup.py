@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '0.0.2'
+VERSION = '0.0.7'
 DESCRIPTION = 'Linear Algebra Calculator with simple functions'
 #LONG_DESCRIPTION = 'A linear algebra function that uses python to calculate values such as the inverse or transpose of a matrix and much more'
 
 # Setting up
 setup(
-    name="linearAlgebraVectorMath",
+    name="linearAlgebraCalc",
     version=VERSION,
     author="Aditya Srikanth",
     author_email="aditya.srikanth11@gmail.com" ,

@@ -1,14 +1,15 @@
-import basicOperations 
-import globalFunctions as gf
-import matrixOperations as mo
+
+from linearAlgebraCalc.basicOperations import matrixMultiply
+#import globalFunctions as gf
+#import matrixOperations as mo
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
-        return basicOperations.matrixMultiply(a,b)
-    else:
-        gf.errorTraceback()
-        gf.printError('List of lists not found for matrices A and B')
-
+        return matrixMultiply(a,b)
+    #else:
+    #    gf.errorTraceback()
+    #    gf.printError('List of lists not found for matrices A and B')
+'''
 # Working multiplication
 #print(mult([[1,2]], [[3,4], [5,6]]))
 # Intential Error:
@@ -65,3 +66,6 @@ def inverse(a):
 # Working 
 #print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
 
+'''
+def add(a, b):
+    return a + b

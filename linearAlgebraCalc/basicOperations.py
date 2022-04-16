@@ -1,4 +1,4 @@
-import globalFunctions as gf
+from linearAlgebraCalc.globalFunctions import errorTraceback, printError, arrDim
 
 def matrixMultiply(a, b):
 
@@ -15,12 +15,12 @@ def matrixMultiply(a, b):
         return result
     
     else:
-        gf.errorTraceback()
-        gf.printError('Columns of first matrix must match rows of second matrix!')
+        errorTraceback()
+        printError('Columns of first matrix must match rows of second matrix!')
 
 def matrixAdd(a, b):
 
-    if gf.arrDim(a) == gf.arrDim(b):
+    if arrDim(a) == arrDim(b):
 
         result = []
         for i in range(len(a)):
@@ -31,12 +31,12 @@ def matrixAdd(a, b):
 
         return result
     else:
-            gf.errorTraceback()
-            gf.printError('Both matrices must have the same dimensions!')
+            errorTraceback()
+            printError('Both matrices must have the same dimensions!')
 
 def matrixSub(a, b):
 
-    if gf.arrDim(a) == gf.arrDim(b):
+    if arrDim(a) == arrDim(b):
 
         result = []
         for i in range(len(a)):
@@ -47,5 +47,5 @@ def matrixSub(a, b):
 
         return result
     else:
-            gf.errorTraceback()
-            gf.printError('Both matrices must have the same dimensions!')
+            errorTraceback()
+            printError('Both matrices must have the same dimensions!')
