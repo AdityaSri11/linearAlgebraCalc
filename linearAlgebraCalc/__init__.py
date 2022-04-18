@@ -1,11 +1,15 @@
+from linearAlgebraCalc.basicOperations import *
+from linearAlgebraCalc.globalFunctions import *
+from linearAlgebraCalc.matrixOperations import *
 
-from linearAlgebraCalc.basicOperations import matrixMultiply, matrixAdd, matrixSub 
-from linearAlgebraCalc.globalFunctions import errorTraceback, printError
-from linearAlgebraCalc.matrixOperations import determinent, transposeMatrix, inverseMatrix
+# Delete when publishing 
+from basicOperations import *
+from matrixOperations import *
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
-        return matrixMultiply(a,b)
+        return multiply(a,b)
+        #return matrixMultiply(a,b)
     else:
         errorTraceback()
         printError('List of lists not found for matrices A and B')
@@ -65,3 +69,14 @@ def inverse(a):
 
 # Working 
 #print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
+
+def solve(a,b):
+    if all(isinstance(x, list) for x in a) and isinstance(b, list):
+        return systemEquations(a,b)
+    else:
+        errorTraceback()
+        printError('List of lists not found for the matrix') 
+
+# Working
+#print(solve([[1, 1, 1], [0, 2, 5], [2, 5, -1]] , [6, -4, 27]))
+#print(solve([[1,2,1,-1] , [1.5,1,2,2] , [4,4,3,4] , [2/5, 0, 1/5, 1]] , [5,8,22,3]))

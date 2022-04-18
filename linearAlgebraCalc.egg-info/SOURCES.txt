@@ -2,6 +2,7 @@ README.md
 setup.py
 linearAlgebraCalc/__init__.py
 linearAlgebraCalc/basicOperations.py
+linearAlgebraCalc/equations.py
 linearAlgebraCalc/globalFunctions.py
 linearAlgebraCalc/matrixOperations.py
 linearAlgebraCalc.egg-info/PKG-INFO

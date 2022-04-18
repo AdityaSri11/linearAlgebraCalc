@@ -1,7 +1,6 @@
-
-from linearAlgebraCalc.basicOperations import matrixMultiply, matrixAdd, matrixSub 
-from linearAlgebraCalc.globalFunctions import errorTraceback, printError
-from linearAlgebraCalc.matrixOperations import determinent, transposeMatrix, inverseMatrix
+from linearAlgebraCalc.basicOperations import *
+from linearAlgebraCalc.globalFunctions import *
+from linearAlgebraCalc.matrixOperations import *
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
@@ -65,3 +64,5 @@ def inverse(a):
 
 # Working 
 #print(inverse([[1,2,3] , [3,4,6], [3,4,5]]))
+
+printName()
