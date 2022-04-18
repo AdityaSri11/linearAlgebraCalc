@@ -38,6 +38,16 @@ def sub(a, b):
 # Intential Error:
 #print(sub([[1,2] , [1,1]], [[3,4] , [5,6]]))
 
+def scalarMultiply(a, k):
+    if all(isinstance(x, list) for x in a):
+        return scalarMatrixMultiply(a, k)
+    else:
+        errorTraceback()
+        printError('List of lists not found for the matrix')
+
+# Working
+print(scalarMultiply([[1,2], [7,8]] , 3))
+
 def determinent(a):
     if all(isinstance(x, list) for x in a):
         return determinent(a)

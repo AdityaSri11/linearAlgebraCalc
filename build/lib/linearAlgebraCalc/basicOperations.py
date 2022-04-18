@@ -1,16 +1,15 @@
 from linearAlgebraCalc.globalFunctions import errorTraceback, printError, arrDim
 
-def matrixMultiply(a, b):
+def multiply(a,b):
 
     if len(b) == len(a[0]):
 
-        result = [[0 for x in range(len(b[0]))] for y in range(len(a))]
-        
+        result = [[0 for z in range(len(b[0]))] for w in range(len(a))]
+
         for i in range(len(a)):
             for j in range(len(b[0])):
-                result[i][j] = 0
-                for x in range(len(b[0])):           
-                    result[i][j] += (a[i][x] * b[x][j])
+                for k in range(len(b)):
+                    result[i][j] += a[i][k] * b[k][j]
 
         return result
     

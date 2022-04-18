@@ -1,4 +1,4 @@
-from linearAlgebraCalc.globalFunctions import arrDim, errorTraceback, printError
+from linearAlgebraCalc.globalFunctions import *
 from linearAlgebraCalc.basicOperations import *
 
 # Delete 

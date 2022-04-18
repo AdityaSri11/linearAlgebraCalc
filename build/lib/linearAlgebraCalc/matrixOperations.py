@@ -1,4 +1,8 @@
 from linearAlgebraCalc.globalFunctions import arrDim, errorTraceback, printError
+from linearAlgebraCalc.basicOperations import *
+
+# Delete 
+from basicOperations import multiply
 
 def __cofactor(a, i , j):
     return [row[: j] + row[j+1:] for row in (a[: i] + a[i+1:])]
@@ -73,5 +77,28 @@ def inverseMatrix(a):
         errorTraceback()
         printError('Matrix is not a square matrix!')
     
-def printName():
-    print("Aditya Srikanth")
+def systemEquations(a,b):
+    
+    dimA = arrDim(a)
+    
+    if dimA[1] == len(b):
+        
+        invA = inverseMatrix(a)
+        deter = determinent(invA)
+        tranB = transposeMatrix([b])
+
+        for x in range(len(invA)):
+            for y in range(len(invA[x])):
+                invA[x][y] = (invA[x][y] / deter)
+
+        S = multiply(invA, tranB)
+
+        for i in range(len(S)):
+            for j in range(len(S[0])):
+                S[i][j] = round((S[i][j] * deter) , 2)
+
+        return S
+
+    else:
+        errorTraceback()
+        printError('Dimensions of augmented matrix do not match!')
