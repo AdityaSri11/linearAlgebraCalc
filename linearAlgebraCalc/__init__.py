@@ -3,8 +3,8 @@ from linearAlgebraCalc.globalFunctions import *
 from linearAlgebraCalc.matrixOperations import *
 
 # Delete when publishing 
-from basicOperations import *
-from matrixOperations import *
+#from basicOperations import *
+#from matrixOperations import *
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
@@ -46,11 +46,11 @@ def scalarMultiply(a, k):
         printError('List of lists not found for the matrix')
 
 # Working
-print(scalarMultiply([[1,2], [7,8]] , 3))
+#print(scalarMultiply([[1,2], [7,8]] , 3))
 
 def determinent(a):
     if all(isinstance(x, list) for x in a):
-        return determinent(a)
+        return matrixDeterminent(a)
     else:
         errorTraceback()
         printError('List of lists not found for the matrix')

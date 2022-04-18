@@ -1,13 +1,13 @@
-from linearAlgebraCalc.globalFunctions import arrDim, errorTraceback, printError
+from linearAlgebraCalc.globalFunctions import *
 from linearAlgebraCalc.basicOperations import *
 
 # Delete 
-from basicOperations import multiply
+#from basicOperations import multiply
 
 def __cofactor(a, i , j):
     return [row[: j] + row[j+1:] for row in (a[: i] + a[i+1:])]
 
-def determinent(a):
+def matrixDeterminent(a):
 
     dim = arrDim(a)
 

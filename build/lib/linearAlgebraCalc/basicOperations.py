@@ -48,3 +48,11 @@ def matrixSub(a, b):
     else:
             errorTraceback()
             printError('Both matrices must have the same dimensions!')
+
+def scalarMatrixMultiply(a, k):
+
+    for i in range(len(a)):
+        for j in range(len(a[i])):
+            a[i][j] = (a[i][j] * k)
+
+    return a 
