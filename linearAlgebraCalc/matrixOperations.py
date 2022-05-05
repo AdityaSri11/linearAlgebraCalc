@@ -2,7 +2,8 @@ from linearAlgebraCalc.globalFunctions import *
 from linearAlgebraCalc.basicOperations import *
 
 # Delete 
-#from basicOperations import multiply
+from basicOperations import *
+from globalFunctions import *
 
 def __cofactor(a, i , j):
     return [row[: j] + row[j+1:] for row in (a[: i] + a[i+1:])]
