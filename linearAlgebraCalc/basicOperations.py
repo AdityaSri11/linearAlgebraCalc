@@ -1,7 +1,6 @@
 from linearAlgebraCalc.globalFunctions import *
 
-#from matrixOperations import *
-from globalFunctions import *
+#from globalFunctions import *
 
 def multiply(a,b):
 
