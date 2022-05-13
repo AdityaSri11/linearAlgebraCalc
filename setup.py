@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from pathlib import Path
 
 
-VERSION = '0.0.18'
+VERSION = '0.0.21'
 DESCRIPTION = 'Linear Algebra Calculator with simple functions'
 #LONG_DESCRIPTION = 'A linear algebra function that uses python to calculate values such as the inverse or transpose of a matrix and much more'
 this_directory = Path(__file__).parent

@@ -1,13 +1,13 @@
-from linearAlgebraCalc.basicOperations import *
-from linearAlgebraCalc.globalFunctions import *
-from linearAlgebraCalc.matrixOperations import *
-#from linearAlgebraCalc.eigan import *
+# from linearAlgebraCalc.basicOperations import *
+# from linearAlgebraCalc.globalFunctions import *
+# from linearAlgebraCalc.matrixOperations import *
+# from linearAlgebraCalc.eigan import *
 
 # Delete when publishing 
-# from basicOperations import *
-# from matrixOperations import *
-# from globalFunctions import *
-# from eigan import *
+from basicOperations import *
+from matrixOperations import *
+from globalFunctions import *
+from eigan import *
 
 def mult(a, b):
     if all(isinstance(x, list) for x in a) and all(isinstance(x, list) for x in b):
@@ -94,5 +94,13 @@ def solve(a,b):
 #print(solve([[1, 1, 1], [0, 2, 5], [2, 5, -1]] , [6, -4, 27]))
 #print(solve([[1,2,1,-1] , [1.5,1,2,2] , [4,4,3,4] , [2/5, 0, 1/5, 1]] , [5,8,22,3]))
 
-m1 = eiganMatrix([[2,3],[2,3]])
-print(m1.eiganValues)
+def eiganValues(a):
+    dim = arrDim(a)
+
+    if all(isinstance(x, list) for x in a) and dim[0] == dim[1]:
+        return eiganValuesC(a)
+    else:
+        errorTraceback()
+        printError('List of lists not found for matrix A')
+
+print(eiganValues([[1, 1, 1], [0, 2, 5], [2, 5, -1]]))

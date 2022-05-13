@@ -2,7 +2,8 @@ from linearAlgebraCalc.globalFunctions import *
 from linearAlgebraCalc.basicOperations import *
 
 # Delete 
-#from basicOperations import multiply
+#from basicOperations import *
+#from globalFunctions import *
 
 def __cofactor(a, i , j):
     return [row[: j] + row[j+1:] for row in (a[: i] + a[i+1:])]
@@ -21,7 +22,7 @@ def matrixDeterminent(a):
             for i in range(dim[0]):
                 sign = (-1) ** i
 
-                deterInner = determinent(__cofactor(a, 0, i))
+                deterInner = matrixDeterminent(__cofactor(a, 0, i))
                 deter += (sign * a[0][i] * deterInner)
             
             return deter
@@ -44,7 +45,7 @@ def inverseMatrix(a):
 
     if (dim[0] == dim[1]):
 
-        deter = determinent(a)
+        deter = matrixDeterminent(a)
         if (deter != 0):
             inverse = [[0 for x in range(len(a[0]))] for y in range(len(a))]
 
@@ -63,7 +64,7 @@ def inverseMatrix(a):
                         else:
                             sign = -1
                         
-                        inverse[j][i] = (sign) * (determinent(cofacter))
+                        inverse[j][i] = (sign) * (matrixDeterminent(cofacter))
             
             for i in range(len(a)):
                 for j in range(len(a)):
@@ -84,7 +85,7 @@ def systemEquations(a,b):
     if dimA[1] == len(b):
         
         invA = inverseMatrix(a)
-        deter = determinent(invA)
+        deter = matrixDeterminent(invA)
         tranB = transposeMatrix([b])
 
         for x in range(len(invA)):
