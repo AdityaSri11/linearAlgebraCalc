@@ -19,9 +19,9 @@ After importing the package, in a python3 project the import statement
 import linearAlgebraCalc 
 ```
 
-Using the functions presented by calling them as such ```bash linearAlgebraCalc.add() ```
+Using the functions presented by calling them as such ```linearAlgebraCalc.add() ```
 
-Currently, the supported functions are listed in the following file directory: ```bash linearAlgebraCalc/__init__.py ```
+Currently, the supported functions are listed in the following file directory: ```linearAlgebraCalc/__init__.py ```
 Each individual function in that file is a working function that can be used in your program with the correct parameters. If incorrect parameters or incorrect fields are entered, appropriate error messages will return to console, allowing the user to understand their issue. 
 
 ## Contributing
