@@ -20,3 +20,13 @@ import linearAlgebraCalc
 ```
 
 Using the functions presented by calling them as such ```bash linearAlgebraCalc.add() ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Requirments
+1. sys
+2. os
+3. traceback
