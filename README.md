@@ -6,3 +6,4 @@ Throughout my sophmore year of college, myself and my engineering friends had a 
 The package can be found with more information, and the source code on the website: https://pypi.org/project/linearAlgebraCalc/
 
 ## How to use
+Upon installing and having python3 running on the local machine, running the command pip install linearAlgebraCalc
