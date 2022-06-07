@@ -6,4 +6,15 @@ Throughout my sophmore year of college, myself and my engineering friends had a 
 The package can be found with more information, and the source code on the website: https://pypi.org/project/linearAlgebraCalc/
 
 ## How to use
-Upon installing and having python3 running on the local machine, running the command pip install linearAlgebraCalc
+Upon installing and having python3 running on the local machine, running the command 
+
+```bash
+pip install linearAlgebraCalc
+```
+Version History: most recent up to date version is 1.21
+
+After importing the package, in a python3 project the import statement 
+
+```bash
+import linearAlgebraCalc 
+```
