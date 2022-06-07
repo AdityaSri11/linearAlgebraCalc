@@ -21,6 +21,9 @@ import linearAlgebraCalc
 
 Using the functions presented by calling them as such ```bash linearAlgebraCalc.add() ```
 
+Currently, the supported functions are listed in the following file directory: ```bash linearAlgebraCalc/__init__.py ```
+Each individual function in that file is a working function that can be used in your program with the correct parameters. If incorrect parameters or incorrect fields are entered, appropriate error messages will return to console, allowing the user to understand their issue. 
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
