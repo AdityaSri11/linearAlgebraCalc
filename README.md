@@ -18,3 +18,5 @@ After importing the package, in a python3 project the import statement
 ```bash
 import linearAlgebraCalc 
 ```
+
+Using the functions presented by calling them as such ```bash linearAlgebraCalc.add() ```
